@@ -7,30 +7,34 @@ class Faller{
   int d;
   boolean isCatched;
 
+
   Faller() {
     location = new PVector(random (20, width),random (0, 80));
     velocity = new PVector(0,5);
     
-    topspeed = 5;
-    d = 20;
+    topspeed = 4;
+    d = 50;
     isCatched = false;
  }
  
   void update() {
     acceleration = new PVector(player.x - location.x,0);
     acceleration.normalize();
-    acceleration.mult(0.02);
+    acceleration.mult(0.029);
     velocity.sub(acceleration);
     velocity.limit(topspeed);
     location.add(velocity);
   }
   
   void display() {
-    circle(location.x, location.y, d);
+    imageMode(CENTER);
+    SlevaImage.resize(0,d);
+    image(SlevaImage, location.x, location.y); 
+    //circle(location.x, location.y, d);
   }
   
   void fall(Stickman player){
-   if(isCatched){ location.x = player.x + 1.5*d;
+   if(isCatched){ location.x = player.x + 2*player.d;
    location.y = height - 3*player.d;
    }
    location.add(velocity);
@@ -49,7 +53,7 @@ class Faller{
  }
  
    void catche(Stickman player){
-   boolean isInside = (player.x - 20 < location.x && player.x + 20 > location.x );
+   boolean isInside = (player.x - d < location.x && player.x + d > location.x );
    boolean isTouching = location.y > height - 3.5*player.d;
    
    if (isInside && isTouching) isCatched = true;

@@ -3,7 +3,7 @@ class Enemy {
   PVector velocity;
   PVector acceleration;
   
-  float d;
+  int d;
   float topspeed;
   boolean failed;
 
@@ -12,8 +12,8 @@ class Enemy {
     velocity = new PVector(0,5);
     //x = random(10, width);
     //y = random(-10, 100);
-    d = 30;
-    topspeed = 5;
+    d = 85;
+    topspeed = 4;
     failed = false;
   }
   
@@ -26,8 +26,19 @@ class Enemy {
     location.add(velocity);
   }
 
-  void display() {
-    circle(location.x, location.y, d);
+  void display(Stickman player) {
+    if(player.x - location.x<0){
+    imageMode(CENTER);
+    EnemyLImage.resize(0,d);
+    image(EnemyLImage, location.x, location.y); 
+    }else{
+    imageMode(CENTER);
+    EnemyRImage.resize(0,d);
+    image(EnemyRImage, location.x, location.y); 
+    //fill(0);
+    //circle(location.x, location.y, d);
+    //fill(255);
+    }
   }
   
   void fall(Stickman player) {
@@ -50,7 +61,7 @@ class Enemy {
   }
 
   boolean fail(Stickman player) {
-    boolean isInside = (player.x - 20 < location.x && player.x + 20 > location.x );
+    boolean isInside = (player.x - d < location.x && player.x + d > location.x );
     boolean isTouching = location.y > height - 3.5*player.d;
 
     if (isInside && isTouching)return true;

@@ -5,7 +5,7 @@ class Stickman {
 
 
   void display() {
-    d = 25;
+    d = 32;
 
     circle(x, height - 3.5*d, d+5);
     line (x, height - 3*d + 2.5, x, height - d);
