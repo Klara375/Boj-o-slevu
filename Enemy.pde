@@ -16,6 +16,11 @@ class Enemy {
     topspeed = 4;
     failed = false;
   }
+  void run(){
+    update(player);
+    display(player);
+    fall(player);
+  }
   
    void update(Stickman player) {
     acceleration = new PVector(player.x - location.x,0);
@@ -49,22 +54,35 @@ class Enemy {
   }
 
   boolean landed() {
-    if (location.y > height) return true;
+    if (location.y > height+20) return true;
     else return false;
   }
 
   void reset() {
    velocity = new PVector(0, 4);
    location.x = (int) random(20, width - 20);
-   location.y = (int) random(0, 100);
+   location.y = (int) random(-50, 100);
    failed = false;
   }
 
-  boolean fail(Stickman player) {
-    boolean isInside = (player.x - d < location.x && player.x + d > location.x );
-    boolean isTouching = location.y > height - 3.5*player.d;
+  boolean hit(Stickman player) {
+    boolean isInside = (player.x - d/1.5 < location.x && player.x + d/1.5 > location.x );
+    boolean isTouching = location.y > height - 4*player.d;
 
     if (isInside && isTouching)return true;
     else return false;
+  }
+  
+  void fail(){
+    if (kosik.hit(player)) {
+    background(0);
+    fill(255);
+    textSize(50);
+    text("BUM!", 599, 250);
+    text("BÁC!", 600, 310);
+    text("Narazil do tebe nepřítel! KONEC HRY Zkus to znovu", 15, height/2);
+    kosik.failed = true;
+    cena = 3000;
+  }
   }
 }

@@ -7,57 +7,62 @@ int cena;
 PImage SlevaImage;
 PImage EnemyLImage;
 PImage EnemyRImage;
+PImage ObchodImage;
+PImage KasaImage;
+PImage HeadLImage;
+PImage HeadRImage;
 
 Stickman player;
 Enemy kosik;
+Settings background;
 Faller[] sleva = new Faller[pocet];
+WinScrean konec;
 
 void setup() {
   size(1280, 720);
   player = new Stickman();
   kosik = new Enemy();
+  background = new Settings();
   for (int i = 0; i < pocet; i++) {
     sleva[i] = new Faller();
   }
+  konec = new WinScrean();
+  
   SlevaImage = loadImage("SLEVA.png");
   EnemyLImage = loadImage("EnemyL.png");
   EnemyRImage = loadImage("EnemyR.png");
+  ObchodImage = loadImage("Kwik-E-Mart.png");
+  KasaImage = loadImage("kasa.png");
+  HeadLImage = loadImage("abeL.png");
+  HeadRImage = loadImage("abeR.png");
 }
 
 void draw() {
-  background(240);
-  cena = 3000;
-  if (kosik.fail(player)) {
-    background(0);
-    fill(255);
-    textSize(50);
-    text("Narazil do tebe nepřítel! KONEC HRY Zkus to znovu", 15, height/2);
-    kosik.failed = true;
-  }
-  player.display();
-  player.move();
-  player.border();
+  background(10, 170, 230);
+  cena = 600;
 
-  kosik.display(player);
-  kosik.fall(player);
-  kosik.update(player);
+  background.display();
+  player.run();
+
+  kosik.run();
   if (kosik.landed()) kosik.reset();
 
-
-  for (int i = 0; i<pocet; i++) {
-    sleva[i].fall(player);
-    sleva[i].update();
+  for (int i = 0; i < pocet; i++) {
+    sleva[i].run();
     if (sleva[i].landed()) {
       sleva[i].reset();
     }
-    sleva[i].catche(player);
-    sleva[i].display();
-    if(sleva[i].isCatched) cena-=100;
+    if (sleva[i].isCatched) cena -= 50;
   }
-  fill(50);
-  text(cena, 15, height/2);
-
-  //rect (20,20,300,300);
+  background.bill();
+  kosik.fail();
+  if(cena < 150){
+    for (int i = 0; i < pocet; i++) {
+    konec.run(kosik, player);
+    //sleva[i].display();
+  }
+  }
+  
 }
 
 

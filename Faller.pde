@@ -17,20 +17,27 @@ class Faller{
     isCatched = false;
  }
  
-  void update() {
-    acceleration = new PVector(player.x - location.x,0);
-    acceleration.normalize();
-    acceleration.mult(0.029);
-    velocity.sub(acceleration);
-    velocity.limit(topspeed);
-    location.add(velocity);
-  }
-  
+ void run(){
+   display();
+   update();
+   fall(player);
+   catche(player);
+ }
+ 
   void display() {
     imageMode(CENTER);
     SlevaImage.resize(0,d);
     image(SlevaImage, location.x, location.y); 
     //circle(location.x, location.y, d);
+  }
+  
+  void update() {
+    acceleration = new PVector(player.x - location.x,0);
+    acceleration.normalize();
+    acceleration.mult(0.033);
+    velocity.sub(acceleration);
+    velocity.limit(topspeed);
+    location.add(velocity);
   }
   
   void fall(Stickman player){
@@ -48,7 +55,7 @@ class Faller{
  void reset(){
    velocity = new PVector(0, 4);
    location.x = (int) random(20, width - 20);
-   location.y = (int) random(0, 200);
+   location.y = (int) random(-50, 150);
    isCatched = false;
  }
  
