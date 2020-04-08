@@ -4,7 +4,7 @@ class Stickman {
 
   void run() {
     display();
-    move();
+    keyReleased();
     border();
   }
 
@@ -18,8 +18,7 @@ class Stickman {
     line (x, height - d, x - 0.75*d, height);
   }
 
-  void move() {
-    if (keyPressed) {
+  void keyReleased() {
       if (keyCode == LEFT) {
         x -= 7;
         imageMode(CENTER);
@@ -31,8 +30,7 @@ class Stickman {
         imageMode(CENTER);
         HeadRImage.resize(0, 3*d);
         image(HeadRImage, x, height - 4.1*d);
-      }
-    } else {
+      } else {
       imageMode(CENTER);
       HeadLImage.resize(0, 3*d);
       image(HeadLImage, x, height - 4.1*d);

@@ -66,9 +66,13 @@ void draw() {
 }
 
 
-void mouseReleased() {
+//void mouseReleased() {
+   void keyReleased() {
+     if (key == ' ') {
   for (int i = 0; i < pocet; i++) {
     sleva[i].reset();
   }
   kosik.reset();
+  player.d = 30;
 }
+   }
