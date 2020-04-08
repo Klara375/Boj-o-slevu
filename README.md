@@ -1,4 +1,4 @@
-# Boj-o-slevu <bn>
+﻿# Boj-o-slevu <bn>
 ## TODO
 * README
 * "winScrean" (+ "failScrean"?) 
@@ -10,6 +10,6 @@
 * hráč
 * faller
 * nepřítel
-* kolize
+* pohyby, kolizey ...
 * obrázky
 * počítadlo
