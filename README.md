@@ -1,9 +1,9 @@
 ﻿# Boj o slevu <br>
 ## Obsah README <br>
-* [Úvod ke hře](## Úvod <br>) <br>
-* [Pravidla hry](## Pravidla hry) <br>
-* [Ovládání hry](## Ovládání hry) <br>
-* [TODO list](### TODO) <br>
+* Úvod ke hře
+* Pravidla hry
+* Ovládání hry
+* TODO list
 
 ---
 
