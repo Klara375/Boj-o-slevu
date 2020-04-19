@@ -34,11 +34,11 @@ class Enemy {
   void display(Stickman player) {
     if(player.x - location.x<0){
     imageMode(CENTER);
-    EnemyLImage.resize(0,d);
+    EnemyLImage.resize(0,d*3);
     image(EnemyLImage, location.x, location.y); 
     }else{
     imageMode(CENTER);
-    EnemyRImage.resize(0,d);
+    EnemyRImage.resize(0,d*3);
     image(EnemyRImage, location.x, location.y); 
     //fill(0);
     //circle(location.x, location.y, d);
