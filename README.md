@@ -1,6 +1,6 @@
 ﻿# Boj o slevu <br>
 ## Obsah README <br>
-* [Úvod ke hře](## Úvod) <br>
+* [Úvod ke hře](## Úvod <br>) <br>
 * [Pravidla hry](## Pravidla hry) <br>
 * [Ovládání hry](## Ovládání hry) <br>
 * [TODO list](### TODO) <br>
@@ -22,10 +22,12 @@ Sesbírej všechny potřebné slevy. Dej si ale pozor, ať tě nesrazí nějaký
 ---
 
 ## Ovládání hry <br>
-|**←**     | pohyb vlevo     | <br>
-|**→**     | pohyb vpravo    | <br>
-|**↓**     | zastavení pohybu| <br>
-|**space** |restart hry      | <br>
+|klávesa   |akce            |
+|----------|----------------|
+|**←**     |pohyb vlevo     |
+|**→**     |pohyb vpravo    |
+|**↓**     |zastavení pohybu|
+|**space** |restart hry     |
 
 ---
 ---
