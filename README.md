@@ -1,5 +1,5 @@
 ﻿# Boj o slevu <br>
-![Screenshot](/screenshot_1.png)
+![Screenshot](/Screenshot_1.png)
 ## Obsah README <br>
 * Úvod ke hře
 * Pravidla hry
@@ -18,7 +18,8 @@ Jak se to už ale stává, Abe není jediný, kdo tíhne po slevě. Proto si mus
 
 ## Pravidla hry <br>
 
-Sesbírej všechny potřebné slevy. ![sleva](/SLEVA.pgn) <br>
+Sesbírej všechny potřebné slevy. <br>
+![sleva](/SLEVA.pgn) <br>
 Dej si ale pozor, ať tě nesrazí nějaký jiný zákazník! <br>
 ![Meggie](/EnemyL.png) <br>
 
