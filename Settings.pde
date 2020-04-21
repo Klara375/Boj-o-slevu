@@ -1,5 +1,18 @@
 class Settings {
+  PImage ObchodImage;
+  PImage KasaImage;
 
+  Settings() {
+    ObchodImage = loadImage("Kwik-E-Mart.png");
+    KasaImage = loadImage("kasa.png");
+  }
+  void menu(){
+     //textSize(25);
+    //text("Pravidla", 800, 50);
+    //text("Abe Simpson si potřebuje nakoupit. Nemá ale dost peněz, a tak se musí spolehnout na slevy. Není ale sám, kdo loví slevy v " )
+    //textSize(100);
+    //text("Boj o slevu", 50, 135 );
+  }
   void display() {
     imageMode(CENTER);
     KasaImage.resize(0, 200);
@@ -11,9 +24,6 @@ class Settings {
 
     textSize(100);
     text("Boj o slevu", 50, 135 );
-    //textSize(25);
-    //text("Pravidla", 800, 50);
-    //text("Abe Simpson si potřebuje nakoupit. Nemá ale dost peněz, a tak se musí spolehnout na slevy. Není ale sám, kdo loví slevy v " )
   }
 
   void bill() {

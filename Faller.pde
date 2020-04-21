@@ -3,6 +3,7 @@ class Faller{
   PVector velocity;
   PVector acceleration;
   
+  PImage SlevaImage;
   float topspeed;
   int d;
   boolean isCatched;
@@ -12,6 +13,7 @@ class Faller{
     location = new PVector(random (20, width),random (0, 80));
     velocity = new PVector(0,5);
     
+    SlevaImage = loadImage("SLEVA.png");
     topspeed = 4;
     d = 50;
     isCatched = false;
@@ -61,7 +63,7 @@ class Faller{
  
    void catche(Stickman player){
    boolean isInside = (player.x - d < location.x && player.x + d > location.x );
-   boolean isTouching = location.y > height - 3.5*player.d;
+   boolean isTouching = location.y > height - 5*player.d;
    
    if (isInside && isTouching) isCatched = true;
  }

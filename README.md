@@ -1,4 +1,5 @@
 ﻿# Boj o slevu <br>
+![Screenshot](/screenshot_1.png)
 ## Obsah README <br>
 * Úvod ke hře
 * Pravidla hry
@@ -17,7 +18,9 @@ Jak se to už ale stává, Abe není jediný, kdo tíhne po slevě. Proto si mus
 
 ## Pravidla hry <br>
 
-Sesbírej všechny potřebné slevy. Dej si ale pozor, ať tě nesrazí nějaký jiný zákazník! <br>
+Sesbírej všechny potřebné slevy. ![sleva](/SLEVA.pgn) <br>
+Dej si ale pozor, ať tě nesrazí nějaký jiný zákazník! <br>
+![Meggie](/EnemyL.png) <br>
 
 ---
 
@@ -33,10 +36,8 @@ Sesbírej všechny potřebné slevy. Dej si ale pozor, ať tě nesrazí nějaký
 ---
 
 ### TODO <br>
-* README <br>
-* "winScrean" (+ "failScrean"?) <br>
 * úvodní menu <br>
-* více úrovní? <br>
+* více úrovní??? <br>
 * upravení kódu do formálnější podoby <br>
 * kometáře ke kódu <br>
 
@@ -49,3 +50,5 @@ Sesbírej všechny potřebné slevy. Dej si ale pozor, ať tě nesrazí nějaký
 * pohyby, kolize, ... <br>
 * obrázky <br>
 * počítadlo <br>
+* README <br>
+* "winScrean" + "failScrean" <br>

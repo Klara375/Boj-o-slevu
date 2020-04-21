@@ -4,13 +4,6 @@
 
 int pocet = 10;
 int cena;
-PImage SlevaImage;
-PImage EnemyLImage;
-PImage EnemyRImage;
-PImage ObchodImage;
-PImage KasaImage;
-PImage HeadLImage;
-PImage HeadRImage;
 
 Stickman player;
 Enemy kosik;
@@ -27,14 +20,6 @@ void setup() {
     sleva[i] = new Faller();
   }
   konec = new WinScrean();
-  
-  SlevaImage = loadImage("SLEVA.png");
-  EnemyLImage = loadImage("EnemyL.png");
-  EnemyRImage = loadImage("EnemyR.png");
-  ObchodImage = loadImage("Kwik-E-Mart.png");
-  KasaImage = loadImage("kasa.png");
-  HeadLImage = loadImage("abeL.png");
-  HeadRImage = loadImage("abeR.png");
 }
 
 void draw() {
@@ -59,12 +44,9 @@ void draw() {
   if(cena < 150){
     for (int i = 0; i < pocet; i++) {
     konec.run(kosik, player);
-    //sleva[i].display();
   }
   }
-  
 }
-
 
 //void mouseReleased() {
    void keyReleased() {

@@ -1,17 +1,9 @@
 class WinScrean{
-  //PVector location;
-  //PVector velocity;
-  //PVector acceleration;
-  //float topspeed;
-
-
-//  WinScrean() {
-//  }
-
- 
+  
  void run(Enemy kosik, Stickman player){
-    background(100,100,255);
+    background(10, 170, 230);
     kosik.location.y = 0;
+    textSize(25);
     text("WINNER!",width/2 , 75);
     player.run();
     player.d = 100;

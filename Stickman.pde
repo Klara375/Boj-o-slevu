@@ -1,7 +1,13 @@
 class Stickman {
   int d = 30; 
   int x = width/2;
+  PImage HeadLImage;
+  PImage HeadRImage;
 
+  Stickman() {
+    HeadLImage = loadImage("abeL.png");
+    HeadRImage = loadImage("abeR.png");
+  }
   void run() {
     display();
     keyReleased();
@@ -19,18 +25,18 @@ class Stickman {
   }
 
   void keyReleased() {
-      if (keyCode == LEFT) {
-        x -= 7;
-        imageMode(CENTER);
-        HeadLImage.resize(0, 3*d);
-        image(HeadLImage, x, height - 4.1*d);
-      }
-      if (keyCode == RIGHT) {
-        x += 7;
-        imageMode(CENTER);
-        HeadRImage.resize(0, 3*d);
-        image(HeadRImage, x, height - 4.1*d);
-      } else {
+    if (keyCode == LEFT) {
+      x -= 7;
+      imageMode(CENTER);
+      HeadLImage.resize(0, 3*d);
+      image(HeadLImage, x, height - 4.1*d);
+    }
+    if (keyCode == RIGHT) {
+      x += 7;
+      imageMode(CENTER);
+      HeadRImage.resize(0, 3*d);
+      image(HeadRImage, x, height - 4.1*d);
+    } else {
       imageMode(CENTER);
       HeadLImage.resize(0, 3*d);
       image(HeadLImage, x, height - 4.1*d);
