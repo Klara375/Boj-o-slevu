@@ -1,20 +1,20 @@
 class Stickman {
-  int d = 30; 
-  int x = width/2;
-  PImage HeadLImage;
-  PImage HeadRImage;
+  int d = 30;                              //zavedení proměnné pro zobrazení hráče
+  int x = width/2;                         //x-ová souřadnice hráče
+  PImage HeadLImage;                       //zavedení obrázků
+  PImage HeadRImage; 
 
   Stickman() {
-    HeadLImage = loadImage("abeL.png");
+    HeadLImage = loadImage("abeL.png");    //načtení obrázků
     HeadRImage = loadImage("abeR.png");
   }
-  void run() {
+  void run() {                             //funkce, která spustí hráče - spuštění tří funkcí najednou, aaby byl kód v hlavní části přehlednější
     display();
-    keyReleased();
+    key();
     border();
   }
 
-  void display() {
+  void display() {                          //zobrazení hráče
     //circle(x, height - 3.5*d, d+5);
 
     line (x, height - 3*d + 2.5, x, height - d);
@@ -24,7 +24,7 @@ class Stickman {
     line (x, height - d, x - 0.75*d, height);
   }
 
-  void keyReleased() {
+  void key() {                              //pohyb hráče + zobrazení obrázku hlavy do směru, kterým se pohybuje
     if (keyCode == LEFT) {
       x -= 7;
       imageMode(CENTER);
@@ -43,7 +43,7 @@ class Stickman {
     }
   }
 
-  void border() {
+  void border() {                            //nastavení hranice, aby hráč nemohl mimo okno
     if (x<25) x=25;
     if (x>width-25) x=width-25;
   }

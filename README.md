@@ -1,5 +1,6 @@
 ﻿# Boj o slevu <br>
 ![Screenshot](/Screenshot_1.png)
+[Stažení aplikace 'Boj o slevu'](https://drive.google.com/drive/folders/1PU_cQoM2ExOVqo9ffAQ9_ZQZA7TBi0Ej?usp=sharing) <br>
 ## Obsah README <br>
 * Úvod ke hře
 * Pravidla hry
@@ -18,21 +19,21 @@ Jak se to už ale stává, Abe není jediný, kdo tíhne po slevě. Proto si mus
 
 ## Pravidla hry <br>
 
-Sesbírej všechny potřebné slevy. <br>
-![sleva](/SLEVA.pgn) <br>
+Sesbírej všechny potřebné slevy. ![Sleva](/SLEVA.png) <br>
 Dej si ale pozor, ať tě nesrazí nějaký jiný zákazník! <br>
 ![Meggie](/EnemyL.png) <br>
 
 ---
 
 ## Ovládání hry <br>
-|klávesa   |akce            |
-|----------|----------------|
-|**←**     |pohyb vlevo     |
-|**→**     |pohyb vpravo    |
-|**↓**     |zastavení pohybu|
-|**space** |restart hry     |
-
+|klávesa   |akce                |
+|----------|--------------------|
+|**←**     |pohyb vlevo         |
+|**→**     |pohyb vpravo        |
+|**↓**     |zastavení pohybu    |
+|**space** |restart hry         |
+|**m**     |zobrazí menu - pauza|
+|**s**     |skryje menu - start |
 ---
 ---
 
