@@ -11,6 +11,7 @@ Enemy kosik;
 Settings background;
 Faller[] sleva = new Faller[pocet];
 WinScrean konec;
+Zuby zuby;
 
 void setup() {
   size(1280, 720);
@@ -21,6 +22,7 @@ void setup() {
     sleva[i] = new Faller();
   }
   konec = new WinScrean();
+  zuby = new Zuby();
 }
 
 void draw() {
@@ -55,7 +57,6 @@ void draw() {
   }
 }
 
-//void mouseReleased() {
 void keyReleased() {
   if (key == ' ') {                                      //při stisknutí mezerníku -> reset
     for (int i = 0; i < pocet; i++) {

@@ -38,10 +38,7 @@ Dej si ale pozor, ať tě nesrazí nějaký jiný zákazník! <br>
 ---
 
 ### TODO <br>
-* úvodní menu <br>
 * více úrovní??? <br>
-* upravení kódu do formálnější podoby <br>
-* kometáře ke kódu <br>
 
 ---
 
@@ -54,3 +51,5 @@ Dej si ale pozor, ať tě nesrazí nějaký jiný zákazník! <br>
 * počítadlo <br>
 * README <br>
 * "winScrean" + "failScrean" <br>
+* úvodní menu <br>
+* upravení kódu + kometáře ke kódu <br>
