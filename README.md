@@ -19,9 +19,9 @@ Jak se to už ale stává, Abe není jediný, kdo tíhne po slevě. Proto si mus
 
 ## Pravidla hry <br>
 
-Sesbírej všechny potřebné slevy. ![Sleva](/SLEVA.png) <br>
+Sesbírej všechny potřebné slevy. ![Sleva](/data/SLEVA.png) <br>
 Dej si ale pozor, ať tě nesrazí nějaký jiný zákazník! <br>
-![Meggie](/EnemyL.png) <br>
+![Meggie](/data/EnemyL.png) <br>
 
 ---
 
